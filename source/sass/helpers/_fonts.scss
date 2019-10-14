@@ -1,0 +1,38 @@
+@font-face {
+	font-family  : 'Roboto';
+	font-style   : normal;
+	font-weight  : 100;
+	font-display : swap;
+	src          : url('../fonts/roboto-v20-latin_cyrillic-100.eot');
+	src          : url('../fonts/roboto-v20-latin_cyrillic-100.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-v20-latin_cyrillic-100.woff2') format('woff2'),
+	url('../fonts/roboto-v20-latin_cyrillic-100.woff') format('woff'),
+	url('../fonts/roboto-v20-latin_cyrillic-100.ttf') format('truetype'),
+	url('../fonts/roboto-v20-latin_cyrillic-100.svg#Roboto') format('svg');
+}
+
+@font-face {
+	font-family  : 'Roboto';
+	font-style   : normal;
+	font-weight  : 300;
+	font-display : swap;
+	src          : url('../fonts/roboto-v20-latin_cyrillic-300.eot');
+	src          : url('../fonts/roboto-v20-latin_cyrillic-300.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-v20-latin_cyrillic-300.woff2') format('woff2'),
+	url('../fonts/roboto-v20-latin_cyrillic-300.woff') format('woff'),
+	url('../fonts/roboto-v20-latin_cyrillic-300.ttf') format('truetype'),
+	url('../fonts/roboto-v20-latin_cyrillic-300.svg#Roboto') format('svg');
+}
+
+@font-face {
+	font-family  : 'Roboto';
+	font-style   : normal;
+	font-weight  : 400;
+	font-display : swap;
+	src          : url('../fonts/roboto-v20-latin_cyrillic-regular.eot');
+	src          : url('../fonts/roboto-v20-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'),
+	url('../fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'),
+	url('../fonts/roboto-v20-latin_cyrillic-regular.ttf') format('truetype'),
+	url('../fonts/roboto-v20-latin_cyrillic-regular.svg#Roboto') format('svg');
+}

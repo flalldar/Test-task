@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Анкета</title>
+	<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+	<header class="header">
+		<button type="button" class="header__mobile" aria-label="Открыть мобильное меню" data-mobile-menu="nav">
+			<span class="caret" aria-hidden="true">
+				<i></i>
+			</span>
+			<span class="text">
+				Меню
+			</span>
+		</button>
+		<div class="wrapper">
+			<nav class="header__nav" data-mobile-menu="wrapper">
+				<a href="#info" class="header__link header__link--active">
+					Личная информация
+				</a>
+				<a href="#experience" class="header__link">
+					Опыт
+				</a>
+				<a href="#js" class="header__link">
+					JavaScript
+				</a>
+				<a href="#about" class="header__link">
+					О себе
+				</a>
+			</nav>
+		</div>
+	</header>
+	<main class="main">
+		<div class="wrapper">
+			<h1 class="main__title">
+				Анкета
+			</h1>
+			<form action="index.html" class="form">
+				<fieldset class="form__fieldset" id="info">
+					<legend class="form__legend">
+						<i aria-hidden="true" class="form__icon form__icon--info"></i>
+						<span>
+							Личная информация
+						</span>
+					</legend>
+					<div class="wrapper-short">
+						<div class="form__row form__float">
+							<label for="fio">ФИО</label>
+							<input type="text" id="fio" required>
+						</div>
+						<div class="form__row">
+							<select aria-label="Год рождения" data-placeholder="Год рождения" name="year" id="year" required>
+								<option value="" class="is-hidden">&nbsp;</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+								<option value="1989">1989</option>
+								<option value="1988">1988</option>
+								<option value="1987">1987</option>
+								<option value="1986">1986</option>
+							</select>
+						</div>
+						<div class="form__row form__float">
+							<label for="place">Место проживания</label>
+							<input type="text" id="place" required>
+						</div>
+						<div class="form__row form__float">
+							<label for="skype">Skype</label>
+							<input type="text" id="skype" required>
+						</div>
+						<div class="form__row form__float">
+							<label for="email">E-mail</label>
+							<input type="email" id="email" required>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset class="form__fieldset" id="experience">
+					<legend class="form__legend">
+						<i aria-hidden="true" class="form__icon form__icon--experience"></i>
+						<span>
+							Расскажите о своем опыте
+						</span>
+					</legend>
+					<div class="grid grid--cols-3">
+						<div class="grid__item">
+							<label class="form__label-group checkbox-style" for="bem_oocss">
+								<input type="checkbox" id="bem_oocss">
+								<span>
+									БЭМ/OOCSS
+								</span>
+							</label>
+							<label class="form__label-group checkbox-style" for="stylus_less_sass">
+								<input type="checkbox" id="stylus_less_sass">
+								<span>
+									Stylus/LESS/SASS
+								</span>
+							</label>
+							<label class="form__label-group checkbox-style" for="svg">
+								<input type="checkbox" id="svg">
+								<span>
+									Работаю с SVG
+								</span>
+							</label>
+						</div>
+						<div class="grid__item">
+							<label class="form__label-group checkbox-style" for="semantically">
+								<input type="checkbox" id="semantically">
+								<span>
+									Верстаю семантично
+								</span>
+							</label>
+							<label class="form__label-group checkbox-style" for="es2015_es2016">
+								<input type="checkbox" id="es2015_es2016">
+								<span>
+									ES2015/ES2016
+								</span>
+							</label>
+							<label class="form__label-group checkbox-style" for="gulp_grunt">
+								<input type="checkbox" id="gulp_grunt">
+								<span>
+									Gulp/GRUNT
+								</span>
+							</label>
+						</div>
+						<div class="grid__item">
+							<label class="form__label-group checkbox-style" for="webpack">
+								<input type="checkbox" id="webpack">
+								<span>
+									Webpack
+								</span>
+							</label>
+							<label class="form__label-group checkbox-style" for="jquery">
+								<input type="checkbox" id="jquery">
+								<span>
+									jQuery
+								</span>
+							</label>
+							<label class="form__label-group checkbox-style" for="git">
+								<input type="checkbox" id="git">
+								<span>
+									Ипользую Git
+								</span>
+							</label>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset class="form__fieldset form__fieldset--top-gap">
+					<legend class="form__legend" id="js">
+						<i aria-hidden="true" class="form__icon form__icon--js"></i>
+						<span>
+							Уровень владения JavaScript
+						</span>
+					</legend>
+					<div class="form-range">
+						<div class="form-range__nav">
+							<button type="button" class="form-range__label" data-from="0">
+								Не владею
+							</button>
+							<button type="button" class="form-range__label" data-from="25">
+								Использую готовые<br> решения
+							</button>
+							<button type="button" class="form-range__label" data-from="50">
+								Использую готовые решения<br />
+								и умею и переделывать
+							</button>
+							<button type="button" class="form-range__label" data-from="100">
+								Пишу сложный JS с нуля
+							</button>
+						</div>
+						<input type="hidden" class="form-range__slider" id="js_experience">
+					</div>
+				</fieldset>
+				<fieldset class="form__fieldset form__fieldset--top-gap" id="about">
+					<legend class="form__legend">
+						<i aria-hidden="true" class="form__icon form__icon--about"></i>
+						<span>
+							Расскажите о себе
+						</span>
+					</legend>
+					<div class="form__desc">
+						Напишите несколько предложений, чем привлекла наша вакансия
+						и что вы ожидаете от работы у нас.
+					</div>
+					<div class="wrapper-short">
+						<div class="form__row form__float form__float--label-left">
+							<label for="massage">Понравилась тем, что...</label>
+							<textarea name="massage" id="massage" rows="5"></textarea>
+						</div>
+						<div class="form__row form__row--top-gap form__row--center">
+							<button type="submit" class="form__button">
+								Готово
+							</button>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</main>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/ion.rangeSlider.min.js"></script>
+	<script src="js/jquery.formstyler.js"></script>
+	<script src="js/simplebar.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

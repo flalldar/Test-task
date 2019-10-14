@@ -1,0 +1,40 @@
+// ClearFix
+@mixin clearfix() {
+	&:after {
+		content : '';
+		display : table;
+		clear   : both;
+	}
+}
+
+// Placeholder (incule IE9 - need external js lib https://github.com/mathiasbynens/jquery-placeholder)
+
+@mixin placeholder($ie9:yes) {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+
+	&:-moz-placeholder {
+		@content;
+	}
+
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&:-ms-input-placeholder {
+		@content;
+	}
+
+	@if $ie9 == "yes" {
+		&.placeholder {
+			@content;
+		}
+	}
+}
+
+@mixin hide-text() {
+	color       : transparent;
+	font        : 0/0 a;
+	text-shadow : none;
+}

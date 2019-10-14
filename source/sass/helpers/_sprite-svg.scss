@@ -1,0 +1,35 @@
+@mixin svg-about() {
+	background: url('../images/sprite.svg') 0 0 no-repeat;
+	width: 49px;
+	height: 49px;
+}
+@mixin svg-checkbox() {
+	background: url('../images/sprite.svg') 89.90825688073394% 33.333333333333336% no-repeat;
+	width: 15px;
+	height: 11px;
+}
+@mixin svg-dropdown() {
+	background: url('../images/sprite.svg') 89.90825688073394% 45.45454545454545% no-repeat;
+	width: 15px;
+	height: 10px;
+}
+@mixin svg-experience() {
+	background: url('../images/sprite.svg') 65.33333333333333% 0 no-repeat;
+	width: 49px;
+	height: 49px;
+}
+@mixin svg-info() {
+	background: url('../images/sprite.svg') 0 100% no-repeat;
+	width: 49px;
+	height: 49px;
+}
+@mixin svg-js() {
+	background: url('../images/sprite.svg') 65.33333333333333% 100% no-repeat;
+	width: 49px;
+	height: 49px;
+}
+@mixin svg-pill() {
+	background: url('../images/sprite.svg') 100% 0 no-repeat;
+	width: 26px;
+	height: 29px;
+}

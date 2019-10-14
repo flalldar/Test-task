@@ -1,0 +1,336 @@
+// -----------------------------------------------
+//  Form config
+// -----------------------------------------------
+// Error
+$form-label-color    : #444;
+$form-label-size     : 14px;
+$form-label-weight   : 400;
+$form-label-margin   : 0 0 10px;
+$form-error-color    : #F30;
+$form-error-size     : 12px;
+$form-error-weight   : 400;
+
+// Grid
+$form-grid           : 7px;
+
+// -----------------------------------------------
+//  Form style
+// -----------------------------------------------
+.form {
+	position : relative;
+
+	.b-grid {
+		margin : -$form-grid;
+	}
+
+	.b-grid__item {
+		padding : $form-grid;
+	}
+}
+
+.form__row {
+	margin-top : 25px;
+	position   : relative;
+	@media screen and (max-width : 570px) {
+		margin-top : 15px;
+	}
+
+	&--top-gap {
+		margin-top : 62px;
+		@media screen and (max-width : 570px) {
+			margin-top : 25px;
+		}
+	}
+
+	&:first-child {
+		margin-top : 0;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="search"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="password"],
+	select,
+	textarea {
+		width : 100%;
+	}
+
+	label {
+		display     : block;
+		cursor      : pointer;
+		color       : $form-label-color;
+		font-size   : $form-label-size;
+		margin      : $form-label-margin;
+		font-weight : $form-label-weight;
+	}
+}
+
+$float-label-size    : 24px;
+$float-label-color   : $grey;
+$float-label-padding : 20px;
+$float-input-padding : 23px 20px 10px;
+
+// Float Label
+.form__float {
+	position : relative;
+
+	label {
+		position                    : absolute;
+		top                         : 50%;
+		color                       : $float-label-color;
+		font-size                   : $float-label-size;
+		left                        : $float-label-padding;
+		right                       : $float-label-padding;
+		z-index                     : 2;
+		font-weight                 : 400;
+		margin                      : -18px 0 0;
+		transform                   : translateY(0);
+		user-select                 : none;
+		transition                  : top .3s ease, transform .3s ease, font-size .3s ease;
+		will-change                 : transform, font-size, top;
+		text-align                  : center;
+		-webkit-tap-highlight-color : transparent;
+	}
+
+	&.is-textarea label {
+		top       : 31px;
+		font-size : 20px;
+	}
+
+	&.focused label,
+	&.is-textarea.focused label {
+		top       : 21px;
+		font-size : 14px;
+		transform : translateY(0%);
+	}
+
+	input,
+	textarea {
+		text-align : center;
+		position   : relative;
+		z-index    : 1;
+		padding    : $float-input-padding;
+	}
+
+	textarea {
+		min-height : 180px;
+	}
+
+	&--label-left {
+		input,
+		textarea,
+		label {
+			text-align : left;
+		}
+	}
+}
+
+
+.form__legend {
+	color         : $main;
+	font-weight   : 300;
+	font-size     : 30px;
+	margin-bottom : 42px;
+	text-align    : center;
+	@media screen and (max-width : 570px) {
+		font-size     : 24px;
+		margin-bottom : 30px;
+	}
+
+	span {
+		display : block;
+	}
+}
+
+.form__fieldset {
+	margin     : 73px 0 0;
+	padding    : 0;
+	border     : 0;
+	text-align : center;
+	min-width  : 0;
+	width      : 100%;
+	@media screen and (max-width : 570px) {
+		margin-top : 35px;
+	}
+
+	&:first-child {
+		margin-top : 0;
+	}
+
+	&--top-gap {
+		margin-top : 132px;
+		@media screen and (max-width : 570px) {
+			margin-top : 35px;
+		}
+
+		+ .form__fieldset {
+			margin-top : 69px;
+			@media screen and (max-width : 570px) {
+				margin-top : 35px;
+			}
+		}
+	}
+}
+
+.form__icon {
+	margin-bottom  : 16px;
+	display        : inline-block;
+	vertical-align : top;
+
+	&--info {
+		@include svg-info;
+	}
+
+	&--experience {
+		@include svg-experience;
+	}
+
+	&--js {
+		@include svg-js;
+	}
+
+	&--about {
+		@include svg-about;
+	}
+}
+
+.form__label-group {
+	margin-top : 12px;
+
+	&:first-child {
+		margin-top : 0;
+	}
+}
+
+.form__desc {
+	width     : 507px;
+	max-width : 100%;
+	margin    : auto auto 37px;
+
+	.form__legend + & {
+		margin-top : -36px;
+	}
+}
+
+// Button
+.form__button {
+	display            : inline-block;
+	font-weight        : 300;
+	line-height        : 1.25;
+	text-align         : center;
+	white-space        : nowrap;
+	vertical-align     : middle;
+	user-select        : none;
+	border             : 0;
+	padding            : 15px 33px;
+	font-size          : 16px;
+	border-radius      : 10px;
+	transition         : background-color .3s ease;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing    : border-box;
+	box-sizing         : border-box;
+	text-decoration    : none;
+	position           : relative;
+	color              : #FFF;
+	cursor             : pointer;
+	background         : $blue;
+
+	&:hover,
+	&:focus,
+	&.focus {
+		outline    : 0;
+		background : $link-color-hover;
+	}
+
+	&.disabled,
+	&:disabled {
+		cursor     : default;
+		opacity    : .45;
+		box-shadow : none;
+		background : inherit;
+	}
+
+	&:active,
+	&.active {
+		background : $link-color-hover;
+	}
+}
+
+// -----------------------------------------------
+//  Select style import
+// -----------------------------------------------
+@import "select";
+
+// -----------------------------------------------
+//  Form range
+// -----------------------------------------------
+.form-range {
+	margin-top : -5px;
+}
+
+.form-range__nav {
+	display         : flex;
+	flex-flow       : row nowrap;
+	justify-content : space-between;
+	align-items     : flex-end;
+}
+
+.form-range__label {
+	display                     : block;
+	cursor                      : pointer;
+	text-align                  : left;
+	color                       : #2E211C;
+	font-size                   : 13px;
+	line-height                 : (19 / 13);
+	font-weight                 : 300;
+	-webkit-appearance          : none;
+	appearance                  : none;
+	outline                     : 0;
+	border                      : 0;
+	background                  : transparent;
+	position                    : relative;
+	width                       : 25%;
+	margin-left                 : -1px;
+	padding                     : 0 5px 0 0;
+	-webkit-tap-highlight-color : transparent;
+
+	@media screen and (max-width : 750px) {
+		br {
+			display : none;
+		}
+	}
+
+	@media screen and (max-width : 570px) {
+		font-size : 10px;
+	}
+
+	&:after {
+		content     : '';
+		border-left : 1px dotted #B3B3B3;
+		position    : absolute;
+		top         : 100%;
+		margin-top  : 4px;
+		left        : 0;
+		height      : 25px;
+	}
+
+	&:first-child {
+		left : 1px;
+	}
+
+	&:last-child {
+		text-align    : right;
+		padding-right : 0;
+
+		&:after {
+			left  : auto;
+			right : 2px;
+		}
+	}
+}
+
+.form-range__slider {
+	margin-top : 10px;
+}

@@ -1,0 +1,36 @@
+$gutter : 8px !default;
+
+.grid {
+	margin          : -$gutter;
+	display         : flex;
+	flex-flow       : row wrap;
+	justify-content : space-between;
+
+	> .grid {
+		margin : 0;
+	}
+
+	&--center {
+		text-align : center;
+	}
+
+	> .grid__item {
+		display            : inline-block;
+		vertical-align     : top;
+		padding            : $gutter;
+		-webkit-box-sizing : border-box;
+		-moz-box-sizing    : border-box;
+		box-sizing         : border-box;
+	}
+
+	&--cols-3 {
+		> .grid__item {
+			text-align : left;
+			flex       : 0 0 auto;
+			@media screen and (max-width : 570px) {
+				width : 100%;
+			}
+		}
+	}
+}
+

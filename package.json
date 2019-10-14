@@ -1,0 +1,40 @@
+{
+	"name": "taskgulp",
+	"description": "taskgulp task runer",
+	"version": "1.0.0",
+	"licenses": [
+		{
+			"name": "GPL",
+			"url": "http://www.gnu.org/licenses/quick-guide-gplv3.en.html"
+		}
+	],
+	"dependencies": {
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.0",
+		"gulp-cache": "^1.1.3",
+		"gulp-changed": "^4.0.1",
+		"gulp-concat": "^2.6.1",
+		"gulp-file-include": "^2.1.0",
+		"gulp-header": "^2.0.9",
+		"gulp-imagemin": "^6.1.0",
+		"gulp-notify": "^3.2.0",
+		"gulp-postcss": "^8.0.0",
+		"gulp-rename": "^1.4.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-size": "^3.0.0",
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-svg-sprite": "^1.5.0",
+		"gulp-svgmin": "^2.2.0",
+		"gulp-uglify": "^3.0.2",
+		"postcss-flexbugs-fixes": "^4.1.0",
+		"postcss-font-family-system-ui": "^4.1.1",
+		"postcss-gradientfixer": "0.0.6",
+		"postcss-input-style": "^1.0.0",
+		"require-dir": "^1.2.0",
+		"undertaker-forward-reference": "^1.0.2",
+		"vinyl-buffer": "^1.0.1"
+	},
+	"devDependencies": {
+		"browser-sync": "^2.26.7"
+	}
+}

@@ -1,0 +1,22 @@
+body {
+	padding     : 0;
+	margin      : 0;
+	color       : $body-color;
+	line-height : $body-line-height;
+	font-family : $body-font;
+	font-size   : $body-font-size;
+	background  : $body-background;
+	min-width   : 320px;
+}
+
+// Text
+a {
+	outline         : 0;
+	text-decoration : underline;
+	color           : $link-color;
+
+	&:hover {
+		color           : $link-color-hover;
+		text-decoration : none;
+	}
+}
